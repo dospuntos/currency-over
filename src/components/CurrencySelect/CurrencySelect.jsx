@@ -36,7 +36,7 @@ const currencies = [
 const CurrencySelect = ({ value, handleChange }) => (
   <select value={value} onChange={(e) => handleChange(e)}>
     {currencies.map((currency) => {
-      return <option>{currency}</option>;
+      return <option key={currency}>{currency}</option>;
     })}
   </select>
 );

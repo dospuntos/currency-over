@@ -4,6 +4,7 @@ import CurrencySelect from "../src/components/CurrencySelect/CurrencySelect";
 function Page() {
   const [currencyFrom, setCurrencyFrom] = useState("USD");
   const [currencyTo, setCurrencyTo] = useState("USD");
+  const [result, setResult] = useState([]);
 
   function handleChangeFrom(e) {
     setCurrencyFrom(e.target.value);
@@ -11,6 +12,13 @@ function Page() {
 
   function handleChangeTo(e) {
     setCurrencyTo(e.target.value);
+  }
+
+  function handleConvert() {
+    const reqUrl = `https://api.exchangeratesapi.io/latest?symbols=${currencyFrom},${currencyTo}`;
+    fetch(reqUrl)
+      .then((response) => response.json())
+      .then((data) => setResult(data));
   }
 
   return (
@@ -21,11 +29,12 @@ function Page() {
       />
       <CurrencySelect value={currencyFrom} handleChange={handleChangeFrom} /> to{" "}
       <CurrencySelect value={currencyTo} handleChange={handleChangeTo} />
-      <button>Convert</button>
+      <button onClick={handleConvert}>Convert</button>
       <p>
         Converting <strong>{currencyFrom}</strong> to{" "}
         <strong>{currencyTo}</strong>.
       </p>
+      <p>{JSON.stringify(result)}</p>
     </div>
   );
 }
