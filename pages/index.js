@@ -1,8 +1,13 @@
+import CurrencySelect from "../src/components/CurrencySelect/CurrencySelect";
+
 function Page() {
   return (
     <div>
-      <h1>Hello From CurrencyOver</h1>
-      <img src="/images/logo.svg" />
+      <img
+        src="/images/logo.png"
+        style={{ width: 250, margin: "0 auto", display: "block" }}
+      />
+      <CurrencySelect />
     </div>
   );
 }

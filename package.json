@@ -9,7 +9,7 @@
     "start": "next start"
   },
   "keywords": [],
-  "author": "",
+  "author": "Johan Wagenheim/Dos Puntos Design",
   "license": "ISC",
   "dependencies": {
     "next": "^10.0.7",
