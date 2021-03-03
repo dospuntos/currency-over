@@ -1,5 +1,5 @@
-const CurrencySelect = () => (
-  <select>
+const CurrencySelect = ({ value, handleChange }) => (
+  <select value={value} onChange={(e) => handleChange(e)}>
     <option>CAD</option>
     <option>HKD</option>
     <option>ISK</option>
