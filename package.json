@@ -8,8 +8,9 @@
     "dev": "next",
     "build": "next build",
     "start": "next start",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "predeploy": "next build && next export",
+    "deploy": "gh-pages -d out",
+    "export": "next build && next export"
   },
   "keywords": [],
   "author": "Johan Wagenheim/Dos Puntos Design",
