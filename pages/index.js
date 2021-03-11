@@ -1,6 +1,5 @@
 import { useState } from "react";
 import CurrencySelect from "../src/components/CurrencySelect/CurrencySelect";
-import Image from "next/image";
 
 function Page() {
   const [currencyFrom, setCurrencyFrom] = useState("USD");
