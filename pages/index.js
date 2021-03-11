@@ -8,6 +8,7 @@ function Page() {
   const [result, setResult] = useState([]);
 
   function handleChangeFrom(e) {
+    setResult([]);
     setCurrencyFrom(e.target.value);
   }
 
@@ -51,7 +52,7 @@ function Page() {
       {result.rates && (
         <p>
           Result: {currencyAmount} {currencyFrom} ={" "}
-          {currencyAmount * result.rates[currencyTo]} {currencyTo}
+          {currencyAmount * result.rates[currencyTo].toFixed(2)} {currencyTo}
         </p>
       )}
     </div>
