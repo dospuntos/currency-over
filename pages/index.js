@@ -29,11 +29,9 @@ function Page() {
 
   return (
     <div style={{ width: 250, margin: "0 auto", textAlign: "center" }}>
-      <Image
-        src="/images/logo.png"
-        alt="Currency Over - Updated Exchange Rates"
-        width={250}
-        height={23}
+      <img
+        src="images/logo.png"
+        style={{ width: 250, margin: "0 auto", display: "block" }}
       />
       <input
         type="text"
