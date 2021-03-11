@@ -1,5 +1,6 @@
 import { useState } from "react";
 import CurrencySelect from "../src/components/CurrencySelect/CurrencySelect";
+import Image from "next/image";
 
 function Page() {
   const [currencyFrom, setCurrencyFrom] = useState("USD");
@@ -27,10 +28,12 @@ function Page() {
   }
 
   return (
-    <div>
-      <img
+    <div style={{ width: 250, margin: "0 auto", textAlign: "center" }}>
+      <Image
         src="/images/logo.png"
-        style={{ width: 250, margin: "0 auto", display: "block" }}
+        alt="Currency Over - Updated Exchange Rates"
+        width={250}
+        height={23}
       />
       <input
         type="text"
