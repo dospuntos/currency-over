@@ -1,7 +1,7 @@
 import { useState } from "react";
 import CurrencySelect from "../src/components/CurrencySelect/CurrencySelect";
 
-function Page() {
+export default function Page() {
   const [currencyFrom, setCurrencyFrom] = useState("USD");
   const [currencyTo, setCurrencyTo] = useState("USD");
   const [currencyAmount, setCurrencyAmount] = useState(1);
@@ -28,10 +28,6 @@ function Page() {
 
   return (
     <div style={{ width: 250, margin: "0 auto", textAlign: "center" }}>
-      <img
-        src="images/logo.png"
-        style={{ width: 250, margin: "0 auto", display: "block" }}
-      />
       <input
         type="text"
         value={currencyAmount}
@@ -58,5 +54,3 @@ function Page() {
     </div>
   );
 }
-
-export default Page;

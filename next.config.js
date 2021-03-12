@@ -1,4 +1,4 @@
 module.exports = {
-  basePath: "/currency-over",
-  assetPrefix: "/currency-over/",
+  /* basePath: "/currency-over",
+  assetPrefix: "/currency-over/", */
 };
